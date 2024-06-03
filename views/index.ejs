@@ -1,0 +1,28 @@
+<!-- Hier word de header geinclude -->
+<%- include('./partials/head') %>
+
+<main>
+
+  <!-- Sample code to test if its working -->
+  <h1>Fabrique Art Objects</h1>
+  <% if (artObjects && artObjects.length > 0) { %>
+    <ul>
+      <% artObjects.forEach(artObject => { %>
+        <li>
+          <h2><%= artObject.title || 'Untitled' %></h2>
+          <% if (artObject.image) { %>
+            <img src="https://fdnd-agency.directus.app/assets/<%= artObject.image %>" alt="<%= artObject.title || 'Art Object' %>">
+          <% } else { %>
+            <p>No image available</p>
+          <% } %>
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No art objects found.</p>
+  <% } %>
+
+</main>
+
+<!-- Hier word de foot geinclude -->
+<%- include('./partials/foot') %>
