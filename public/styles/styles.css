@@ -30,26 +30,177 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: 'RobotoMedium';
 }
 
-ul, li, a {
+ul, li, a, button {
   padding: 0;
   margin: 0;
   color: unset;
   text-decoration: none;
+
+}
+
+a, button {
+  cursor: pointer;
+}
+
+a:hover, span:hover {
+  text-decoration: underline;
 }
 
 img {
   width: 30%;
 }
 
-/* ---------------- Navigation ---------------- */
+.arabic {
+  font-family: 'NotoSansArabic';
+}
 
+/* ---------------- Header ---------------- */
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0.4em;
+  border-bottom: 1px solid var(--primary-black);
+}
+
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.nav__logo {
+  width: 14em;
+}
+
+.nav__venues {
+  display: none;
+}
+
+.nav__lang {
+  display: none;
+}
+
+.nav__buttons--pc {
+  display: none;
+}
+
+.nav__tickets {
+  background-color: var(--secondary-yellow);
+  padding: 1em;
+  border: 1px solid var(--primary-black);
+  transition: background-color 0.3s ease;
+}
+
+.nav__tickets:hover {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  text-decoration: none;
+}
+
+.nav__hamburger--menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: uppercase;
+
+  background-color: unset;
+  border: none;
+}
+
+.nav__hamburger--menu span {
+  display: none;
+}
+
+.nav__hamburger--menu img {
+  width: 32px;
+  height: 32px;
+  padding: 0.6em;
+  padding-right: 0.1em;
+}
 
 /* ---------------- Main ---------------- */
 
 
 
 /* ---------------- Footer ---------------- */
+
+
+
+/* ---------------- Media Queries ---------------- */
+
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 0.4em 1em;
+  }
+  .nav__buttons {
+    gap: 2em;
+  }
+
+  .nav__venues {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: unset;
+    border: none;
+  }
+
+  .nav__venues img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .nav__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav__hamburger--menu img {
+    padding: 0
+    ;
+  }
+
+  .nav__hamburger--menu span {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .nav__buttons--pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .nav__buttons--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav__buttons--wrapper a {
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 1599px) {
+
+}
+
+@media screen and (min-width: 1799px) {
+
+}
