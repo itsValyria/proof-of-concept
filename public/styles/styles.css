@@ -51,10 +51,6 @@ a:hover, span:hover {
   text-decoration: underline;
 }
 
-img {
-  width: 30%;
-}
-
 .arabic {
   font-family: 'NotoSansArabic';
 }
@@ -129,7 +125,20 @@ img {
 
 /* ---------------- Main ---------------- */
 
+main {
+  margin: 2em;
+}
 
+.grid__container {
+  margin: 2em auto;
+  columns: 5;
+  column-gap: 40px;
+}
+
+.grid__item img {
+  width: 100%;
+  margin-bottom: 2em;
+}
 
 /* ---------------- Footer ---------------- */
 
