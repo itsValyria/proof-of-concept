@@ -9,5 +9,13 @@
   <% }); %>
 </main>
 
+<div class="pagination">
+  <% if (page > 1) { %>
+    <a href="/?page=<%= page - 1 %>" class="pagination__prev">Vorige</a>
+  <% } %>
+  <span>Pagina <%= page %></span>
+  <a href="/?page=<%= page + 1 %>" class="pagination__next">Volgende</a>
+</div>
+
 <!-- Hier word de foot geinclude -->
 <%- include('./partials/foot') %>

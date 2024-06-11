@@ -33,16 +33,34 @@ const fetchFromApi = (endpoint) => {
     });
 };
 
-// Fetch de data van de API van Fabrique Art Objects
-const fetchData = () => {
-  return fetchFromApi("items/fabrique_art_objects");
+// Functie om data van fabrique_art_objects te fetchen met paginatie en oneindige herhaling
+const fetchData = async (page = 1, limit = 20) => {
+  // Haal alle items op
+  const allItems = await fetchFromApi("items/fabrique_art_objects");
+  const totalItems = allItems.length;
+
+  // Bereken de startindex
+  let startIndex = (page - 1) * limit;
+
+  // Maak een array aan voor de resultaten die de items in de juiste volgorde bevat
+  let paginatedItems = [];
+
+  //  Loop door de items en voeg ze toe aan de resultatenarray
+  for (let i = 0; i < limit; i++) {
+    paginatedItems.push(allItems[(startIndex + i) % totalItems]);
+  }
+
+  return paginatedItems;
 };
 
-// Maak een index route die de data van fabrique_art_objects haalt
+// Maak een index route die de data van fabrique_art_objects haalt en pagineert
 app.get("/", (request, response) => {
-  fetchData()
+  const page = parseInt(request.query.page) || 1;
+  const limit = 20;
+
+  fetchData(page, limit)
     .then((data) => {
-      response.render("index", { artObjects: data });
+      response.render("index", { artObjects: data, page });
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
