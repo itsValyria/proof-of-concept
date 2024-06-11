@@ -10,11 +10,9 @@
 </main>
 
 <div class="pagination">
-  <% if (page > 1) { %>
-    <a href="/?page=<%= page - 1 %>" class="pagination__prev">Vorige</a>
-  <% } %>
-  <span>Pagina <%= page %></span>
-  <a href="/?page=<%= page + 1 %>" class="pagination__next">Volgende</a>
+  <a href="/?page=<%= page - 1 %>" class="pagination__prev <%= page <= 1 ? 'disabled' : '' %>">Prev</a>
+  <span>PAGE <%= page %></span>
+  <a href="/?page=<%= page + 1 %>" class="pagination__next <%= artObjects.length < 20 ? 'disabled' : '' %>">Next</a>
 </div>
 
 <!-- Hier word de foot geinclude -->

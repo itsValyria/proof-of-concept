@@ -131,14 +131,56 @@ main {
 
 .grid__container {
   margin: 2em auto;
-  columns: 5;
+  columns: 2;
   column-gap: 40px;
+  min-height: 100vh;
 }
 
 .grid__item img {
   width: 100%;
   margin-bottom: 2em;
 }
+
+/* ---------------- Pagination ---------------- */
+
+.pagination {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  bottom: 2em;
+  gap: 2em;
+  padding: 1em;
+  margin: 0 auto;
+  border: 1px solid var(--primary-black);
+  background-color: var(--primary-white);
+  z-index: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pagination span:hover {
+  text-decoration: none;
+}
+
+.pagination__prev,
+.pagination__next {
+  text-decoration: none;
+}
+
+.pagination__prev.disabled,
+.pagination__next.disabled {
+  cursor: not-allowed;
+  text-decoration: none;
+  color: var(--primary-grey-medium);
+}
+
+.pagination__prev:hover:not(.disabled),
+.pagination__next:hover:not(.disabled) {
+  
+}
+
 
 /* ---------------- Footer ---------------- */
 
@@ -204,12 +246,24 @@ main {
   .nav__buttons--wrapper a {
     line-height: 1.2;
   }
+
+  .grid__container {
+    columns: 3;
+  }
 }
 
 @media screen and (min-width: 1599px) {
+  .grid__container {
+    columns: 4;
+  }
 
+  .pagination {
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (min-width: 1799px) {
-
+  .grid__container {
+    columns: 5;
+  }
 }
