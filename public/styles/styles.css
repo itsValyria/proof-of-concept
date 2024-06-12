@@ -57,6 +57,13 @@ a:hover, span:hover {
 
 /* ---------------- Header ---------------- */
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-white);
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
