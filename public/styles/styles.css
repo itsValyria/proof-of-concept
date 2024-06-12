@@ -176,12 +176,6 @@ main {
   color: var(--primary-grey-medium);
 }
 
-.pagination__prev:hover:not(.disabled),
-.pagination__next:hover:not(.disabled) {
-  
-}
-
-
 /* ---------------- Footer ---------------- */
 
 
