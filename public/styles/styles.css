@@ -287,6 +287,21 @@ main {
     display: block;
     font-weight: bold;
   }
+
+  .pagination__wrapper {
+    flex-direction: row;
+    width: 60vw;
+  }
+
+  .pagination {
+    height: 3em;
+  }
+
+  .search__bar {
+    height: 3em;
+    border: solid 1px var(--primary-black);
+    border-right: none;
+  }
 }
 
 @media screen and (min-width: 1199px) {
@@ -316,10 +331,6 @@ main {
 @media screen and (min-width: 1599px) {
   .grid__container {
     columns: 5;
-  }
-
-  .pagination {
-    font-size: 1.2em;
   }
 }
 
