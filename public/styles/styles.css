@@ -254,7 +254,7 @@ main {
 
 @media screen and (min-width: 1599px) {
   .grid__container {
-    columns: 4;
+    columns: 5;
   }
 
   .pagination {
@@ -264,6 +264,6 @@ main {
 
 @media screen and (min-width: 1799px) {
   .grid__container {
-    columns: 5;
+    columns: 6;
   }
 }
