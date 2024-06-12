@@ -9,24 +9,8 @@
   <% }); %>
 </main>
 
-<div class="pagination__wrapper">
-  <div class="search__bar">
-    <form action="/search" method="get">
-      <fieldset>
-        <input type="text" name="query" placeholder="Search..." required>
-        <button type="submit">
-          <img class="search__bar--img" src="images/search.png" alt="Search">
-        </button>
-      </fieldset>
-    </form>
-  </div>
-
-  <div class="pagination">
-    <a href="/?page=<%= page - 1 %>" class="pagination__prev <%= page <= 1 ? 'disabled' : '' %>">Prev</a>
-    <span>PAGE <%= page %></span>
-    <a href="/?page=<%= page + 1 %>" class="pagination__next <%= artObjects.length < 20 ? 'disabled' : '' %>">Next</a>
-  </div>
-</div>
+<!-- Hier word de pagintion geinclude -->
+<%- include('./partials/pagination-search') %>
 
 <!-- Hier word de foot geinclude -->
 <%- include('./partials/foot') %>
