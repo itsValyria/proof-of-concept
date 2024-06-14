@@ -144,9 +144,41 @@ header {
   margin-bottom: 10px;
 }
 
-/* ---------------- Pagination ---------------- */
+/* ---------------- Search Bar & Hover filters ---------------- */
 
+.search__bar {
+  border-top: 1px solid var(--primary-black);
+  padding-top: 1em;
+  position: relative;
+}
 
+.search__bar input[type="text"] {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 0.5em;
+  font-family: 'RobotoMedium';
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid var(--primary-black);
+  outline: none;
+}
+
+.search__bar button.search__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1.4em;
+  right: 3em;
+}
+
+.search__bar button.search__button img {
+  width: 16px;
+  height: 16px;
+}
 
 /* ---------------- Error handling ---------------- */
 
