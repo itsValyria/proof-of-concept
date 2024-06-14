@@ -137,7 +137,7 @@ main {
 }
 
 .grid__container {
-  margin: 2em auto;
+  margin: 4em auto 0em auto;
   columns: 2;
   column-gap: 40px;
   min-height: 100vh;
@@ -150,98 +150,9 @@ main {
 
 /* ---------------- Pagination ---------------- */
 
-.pagination__wrapper {
-  position: sticky;
-  bottom: 2em;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 16em;
-}
 
-.pagination {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-  padding: 1em;
-  border: 1px solid var(--primary-black);
-  background-color: var(--primary-white);
-  z-index: 1;
-  font-weight: bold;
-  text-transform: uppercase;
-}
 
-.pagination span:hover {
-  text-decoration: none;
-}
-
-.pagination__prev,
-.pagination__next {
-  text-decoration: none;
-}
-
-.pagination__prev.disabled,
-.pagination__next.disabled {
-  cursor: not-allowed;
-  text-decoration: none;
-  color: var(--primary-grey-medium);
-}
-
-.search__bar {
-  width: 100%;
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: none;
-  background-color: var(--primary-white);
-  border: 1px solid var(--primary-black);
-  border-bottom: 0;
-}
-
-.search__bar form {
-  width: 100%;
-  max-width: 12em;
-}
-
-.search__bar fieldset {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border: 1px solid var(--primary-black);
-  padding: 0;
-  margin: 0;
-}
-
-.search__bar fieldset:focus-within {
-  border-color: var(--secondary-red);
-}
-
-.search__bar input {
-  width: 100%;
-  padding: 0.5em;
-  outline: none;
-  font-family: 'RobotoMedium';
-  text-transform: uppercase;
-  border: none;
-}
-
-.search__bar button {
-  padding: 0.2em;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.search__bar--img {
-  width: 16px;
-  height: 16px;
-  padding-right: 4px;
-}
+/* ---------------- Error handling ---------------- */
 
 .error__container {
   display: flex;
@@ -320,21 +231,6 @@ main {
   .nav__hamburger--menu span {
     display: block;
     font-weight: bold;
-  }
-
-  .pagination__wrapper {
-    flex-direction: row;
-    width: 60vw;
-  }
-
-  .pagination {
-    height: 3em;
-  }
-
-  .search__bar {
-    height: 3em;
-    border: solid 1px var(--primary-black);
-    border-right: none;
   }
 
   .error__container {
