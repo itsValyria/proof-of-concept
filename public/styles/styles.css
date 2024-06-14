@@ -100,7 +100,7 @@ header {
   background-color: var(--secondary-yellow);
   padding: 1em;
   border: 1px solid var(--primary-black);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .nav__tickets:hover {
@@ -208,6 +208,12 @@ header {
   font-family: 'RobotoMedium';
   text-transform: uppercase;
   color: var(--primary-white);
+  transition: background-color 0.5s ease;
+}
+
+.button__container button:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-black);
 }
 
 /* ---------------- Error handling ---------------- */
@@ -297,6 +303,25 @@ header {
   
   .error__container img {
     width: 16em;
+  }
+
+  .searchbar__container {
+    bottom: 2em;
+    width: 70%;
+    border: 1px solid;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .search__bar button.search__button {
+    right: 2.2em;
+  }
+
+  .button__container {
+    bottom: 6em;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.4em;
   }
 }
 
