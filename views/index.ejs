@@ -1,12 +1,21 @@
 <!-- Hier word de header geinclude -->
 <%- include('./partials/head') %>
 
-<main id="mainContainer" class="grid__container">
-  <% artObjects.forEach((artObject, index) => { %>
-    <div class="grid__item">
-      <img loading="lazy" src="https://fdnd-agency.directus.app/assets/<%= artObject.image %>" alt="<%= artObject.title %>" class="lazyload" tabindex="0">
-    </div>
-  <% }); %>
+<main id="mainContainer" class="grid__container <%= artObjects.length > 0 ? '' : 'no-results' %>">
+  <% if (artObjects.length > 0) { %>
+    <% artObjects.forEach((artObject, index) => { %>
+      <div class="grid__item">
+        <img loading="lazy" src="https://fdnd-agency.directus.app/assets/<%= artObject.image %>" alt="<%= artObject.title %>" class="lazyload" tabindex="0">
+      </div>
+    <% }); %>
+  <% } else { %>
+    <section class="error__container">
+      <img src="/images/errror.svg" alt="Two arrows indicating to try again">
+      <h2>Oops, caught an error!</h2>
+      <p>No results were found, please try again.</p>
+      <a href="/">Try again</a>
+    </section>
+  <% } %>
 </main>
 
 <!-- Hier word de pagintion geinclude -->
