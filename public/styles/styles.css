@@ -146,10 +146,18 @@ header {
 
 /* ---------------- Search Bar & Hover filters ---------------- */
 
+.searchbar__container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary-white);
+}
+
 .search__bar {
   border-top: 1px solid var(--primary-black);
   padding-top: 1em;
   position: relative;
+  background-color: var(--primary-white);
 }
 
 .search__bar input[type="text"] {
@@ -157,7 +165,7 @@ header {
   width: 80%;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   font-family: 'RobotoMedium';
   font-size: 1.2em;
   text-transform: uppercase;
