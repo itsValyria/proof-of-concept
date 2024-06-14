@@ -14,7 +14,7 @@
   --primary-white: #fff;
   --primary-grey-light: #d4d4d4;
   --primary-grey-medium: #9c9c9c;
-  --primary-grey-dark: #303030;
+  --primary-grey-dark: #414141;
   --primary-black: #000;
 
   --secondary-blue: #7eaaf0;
@@ -162,7 +162,7 @@ header {
 
 .search__bar input[type="text"] {
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 0;
   margin-bottom: 0.8em;
@@ -180,12 +180,34 @@ header {
   cursor: pointer;
   position: absolute;
   top: 1.4em;
-  right: 3em;
+  right: 1.6em;
 }
 
 .search__bar button.search__button img {
   width: 16px;
   height: 16px;
+}
+
+.button__container {
+  display: flex;
+  position: fixed;
+  bottom: 4em;
+  left: 0;
+  right: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 0 0.4em;
+  scrollbar-width: none;
+}
+
+.button__container button {
+  background-color: var(--primary-grey-dark);
+  border: none;
+  padding: 1em 1.6em;
+  margin: 0 1em;
+  font-family: 'RobotoMedium';
+  text-transform: uppercase;
+  color: var(--primary-white);
 }
 
 /* ---------------- Error handling ---------------- */
