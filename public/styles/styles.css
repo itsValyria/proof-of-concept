@@ -347,11 +347,19 @@ header {
   .grid__container {
     columns: 3;
   }
+
+  .searchbar__container {
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 1599px) {
   .grid__container {
     columns: 5;
+  }
+
+  .searchbar__container {
+    width: 50%;
   }
 }
 
