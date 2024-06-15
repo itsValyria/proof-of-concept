@@ -12,7 +12,7 @@
   
   <!-- Load More form -->
   <% if (artObjects.length > 0) { %>
-    <form method="GET" action="/">
+    <form class="load__more" method="GET" action="/">
       <input type="hidden" name="repeat" value="<%= repeatCount + 1 %>">
       <button type="submit">Load More</button>
     </form>

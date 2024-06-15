@@ -136,7 +136,7 @@ header {
   margin: 4em auto 0em auto;
   columns: 4;
   column-gap: 10px;
-  min-height: 90vh;
+  min-height: 60vh;
 }
 
 .grid__item img {
@@ -214,6 +214,26 @@ header {
 .button__container button:hover {
   background-color: var(--primary-white);
   color: var(--primary-black);
+}
+
+.load__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load__more button {
+  margin-top: 2em;
+  background-color: var(--secondary-yellow);
+  padding: 1em;
+  border: 1px solid var(--primary-black);
+  transition: background-color 0.3s ease;
+}
+
+.load__more button:hover {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  text-decoration: none;
 }
 
 /* ---------------- Error handling ---------------- */
