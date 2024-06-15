@@ -1,24 +1,24 @@
 <!-- Hier word de header geinclude -->
 <%- include('./partials/head') %>
 
-<main id="mainContainer" <%= artObjects.length > 0 ? '' : 'no-results' %>">
-  <section class="grid__container">
-    <% if (artObjects.length > 0) { %>
-      <% artObjects.forEach((artObject, index) => { %>
-        <div class="grid__item">
-          <img loading="lazy" src="https://fdnd-agency.directus.app/assets/<%= artObject.image %>" alt="<%= artObject.title %>" class="lazyload" tabindex="0">
-        </div>
-      <% }); %>
-    <% } else { %>
-      <section class="error__container">
-        <img src="/images/errror.svg" alt="Two arrows indicating to try again">
-        <h2>Oops, caught an error!</h2>
-        <p>No results were found, please try again.</p>
-        <a href="/">Try again</a>
-      </section>
-    <% } %>
+<main id="mainContainer">
+  <section class="grid__container <%= artObjects.length > 0 ? '' : 'no-results' %>">
+    <% artObjects.forEach((artObject, index) => { %>
+      <div class="grid__item">
+        <img loading="lazy" src="https://fdnd-agency.directus.app/assets/<%= artObject.image %>" alt="<%= artObject.title %>" class="lazyload" tabindex="0">
+      </div>
+    <% }); %>
   </section>
+  
+  <!-- Load More form -->
+  <% if (artObjects.length > 0) { %>
+    <form method="GET" action="/">
+      <input type="hidden" name="repeat" value="<%= repeatCount + 1 %>">
+      <button type="submit">Load More</button>
+    </form>
+  <% } %>
 
+  <!-- Button container -->
   <div class="button__container">
     <button class="hover-button">All objects</button>
     <button class="hover-button">Pottery</button>
@@ -27,6 +27,7 @@
     <button class="hover-button">Glass</button>
   </div>
 
+  <!-- Search bar container -->
   <section class="searchbar__container">
     <form class="search__bar">
       <input type="text" placeholder="Search the collection">

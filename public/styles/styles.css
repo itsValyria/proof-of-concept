@@ -219,10 +219,12 @@ header {
 /* ---------------- Error handling ---------------- */
 
 .error__container {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  columns: 1;
 }
 
 .error__container img {
@@ -248,8 +250,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto 0;
-  min-height: 90vh;
 }
 
 /* ---------------- Footer ---------------- */
