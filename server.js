@@ -1,10 +1,12 @@
 // Importeer het npm pakket express uit de node_modules map
 import express from "express";
+
 // Importeer de zelfgemaakte functie fetchJson uit de ./helpers map
 import fetchJson from "./helpers/fetch-json.js";
 
 // Declare de base URL van de Directus API
 const baseUrl = "https://fdnd-agency.directus.app";
+
 // Maak een nieuwe express app aan
 const app = express();
 
@@ -14,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Stel ejs in als template engine
 app.set("view engine", "ejs");
+
 // Stel de map met ejs templates in
 app.set("views", "./views");
 
