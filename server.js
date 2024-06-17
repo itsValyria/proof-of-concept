@@ -40,6 +40,27 @@ const fetchAllData = () => {
     });
 };
 
+// Functie om paginated data van fabrique_art_objects op te halen en te herhalen
+const fetchPaginatedData = (page, limit) => {
+  return fetchAllData()
+    .then((data) => {
+      const start = page * limit;
+      const end = start + limit;
+      const repeatedData = [];
+
+      // Repeat the data until we have enough items for the requested page and limit
+      while (repeatedData.length < end) {
+        repeatedData.push(...data);
+      }
+
+      return repeatedData.slice(start, end);
+    })
+    .catch((error) => {
+      console.error('Error fetching paginated data:', error);
+      return [];
+    });
+};
+
 // Index route voor de hoofdpagina
 app.get("/", (request, response) => {
   const repeatCount = parseInt(request.query.repeat, 10) || 1;
@@ -56,6 +77,21 @@ app.get("/", (request, response) => {
     .catch((error) => {
       console.error("Fout bij ophalen van data:", error);
       response.status(500).send("Fout bij ophalen van data");
+    });
+});
+
+// API endpoint voor het ophalen van paginated data
+app.get("/api/data", (request, response) => {
+  const page = parseInt(request.query.page, 10) || 0;
+  const limit = parseInt(request.query.limit, 10) || 20;
+
+  fetchPaginatedData(page, limit)
+    .then((data) => {
+      response.json(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching paginated data:", error);
+      response.status(500).json({ error: "Error fetching data" });
     });
 });
 

@@ -55,6 +55,10 @@ a:hover, span:hover {
   font-family: 'NotoSansArabic';
 }
 
+.hidden {
+  display: none;
+}
+
 /* ---------------- Header ---------------- */
 
 header {
@@ -228,6 +232,8 @@ header {
   padding: 1em;
   border: 1px solid var(--primary-black);
   transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-family: 'RobotoMedium';
 }
 
 .load__more button:hover {

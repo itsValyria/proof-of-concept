@@ -2,7 +2,7 @@
 <%- include('./partials/head') %>
 
 <main id="mainContainer">
-  <section class="grid__container <%= artObjects.length > 0 ? '' : 'no-results' %>">
+  <section id="gridContainer" class="grid__container <%= artObjects.length > 0 ? '' : 'no-results' %>">
     <% artObjects.forEach((artObject, index) => { %>
       <div class="grid__item">
         <img loading="lazy" src="https://fdnd-agency.directus.app/assets/<%= artObject.image %>" alt="<%= artObject.title %>" class="lazyload" tabindex="0">
@@ -10,13 +10,16 @@
     <% }); %>
   </section>
   
-  <!-- Load More form -->
+  <!-- Load More form - this can be removed or kept as fallback -->
   <% if (artObjects.length > 0) { %>
     <form class="load__more" method="GET" action="/">
       <input type="hidden" name="repeat" value="<%= repeatCount + 1 %>">
-      <button type="submit">Load More</button>
+      <button id="loadmore" type="submit">Load More</button>
     </form>
   <% } %>
+
+  <!-- Scroll Sentinel -->
+  <div id="scrollSentinel"></div>
 
   <!-- Button container -->
   <div class="button__container">
