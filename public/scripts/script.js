@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gridContainer = document.querySelector('#gridContainer');
   const sentinel = document.querySelector('#scrollSentinel');
+  const loadMoreForm = document.querySelector('#loadmore');
   let page = 0;
   const limit = 20;
   let isLoading = false;
+
+  if (loadMoreForm) {
+    loadMoreForm.classList.add('hidden');
+  }
 
   const fetchData = (page) => {
     isLoading = true;
@@ -55,12 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(sentinel);
 
   fetchData(page)
-    .then(() => {
-      const loadMoreForm = document.querySelector('#loadmore');
-      if (loadMoreForm) {
-        loadMoreForm.classList.add('hidden');
-      }
-    })
     .catch(error => {
       console.error('Fout bij initiële data ophaling:', error);
     });
