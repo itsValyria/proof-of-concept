@@ -1,8 +1,10 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
+![image](https://github.com/itsValyria/proof-of-concept/assets/76444716/9fb76b33-4395-48f7-ad31-17646e8cbbe1)
+
 # Infinite Canvas | Fabrique Amsterdam
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
-Deze sprint hebben wij aan een opdracht gewerkt voor Fabrique, namelijk een infinite canvas voor de website van Qatar Museums.
+Deze sprint hebben wij aan een opdracht gewerkt voor Fabrique, namelijk een infinite canvas voor de website van Qatar Museums. Bekijk het eindresultaat [hier](https://proof-of-concept-dmzk.onrender.com/)!
 
 ## Inhoudsopgave
 
@@ -16,6 +18,9 @@ Deze sprint hebben wij aan een opdracht gewerkt voor Fabrique, namelijk een infi
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
+De opdracht is een infinite canvas die foto's van de tentoongestelde kunst stukken laat zien, zodat mensen een indruk krijgen van wat er zoal te zien is.
+
+![image](https://github.com/itsValyria/proof-of-concept/assets/76444716/6dfadf46-9a17-4e99-8d02-fd536f993f13)
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
